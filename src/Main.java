@@ -58,7 +58,7 @@ public class Main {
 		ArrayList<String[]> games = new ArrayList<String[]>();
 		
 		while ((line = br.readLine()) != null) {
-			String url = "http://www.raptr.com/game/" + line;
+			String url = "http://www.raptr.com/game/" + line + "/discussions";
 			URL oracle = new URL(url);
 	        BufferedReader in = new BufferedReader(
 	        		new InputStreamReader(oracle.openStream()));
