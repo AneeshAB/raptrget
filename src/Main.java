@@ -65,11 +65,11 @@ public class Main {
 	        String inputLine;
 	        String members = "";
 	        while ((inputLine = in.readLine()) != null) {
-	        	if(inputLine.contains("<h3 class=\\\"header\\\">ACTIVE MEMBERS (")) {
+	        	if(inputLine.contains("<div class=\\\"user-list\\\"><h3 class=\\\"header\\\">ACTIVE MEMBERS (")) {
 	        		int start = inputLine.indexOf("<h3 class=\\\"header\\\">ACTIVE MEMBERS (");
 	        		String value = inputLine.substring(start);
-	        		start = inputLine.indexOf(" (");
-	        		value = inputLine.substring(start+2);
+	        		start = inputLine.indexOf("ACTIVE MEMBERS (");
+	        		value = inputLine.substring(start+16);
 	        		start = value.indexOf(")");
 	        		value = value.substring(0, start);
 	        		value = value.replace(",", "");
